@@ -201,5 +201,5 @@ output "private_subnet_id" {
 
 # NOTES:
 # - Verify AMI ID is valid in ap-south-1 before applying
-# - Update key_name to match your actual AWS key pair
-# - Restrict SSH cidr_blocks to your IP in production
+# - Update key_name to match your actual AWS key pair.
+# - Restrict SSH cidr_blocks to your IP in production.
