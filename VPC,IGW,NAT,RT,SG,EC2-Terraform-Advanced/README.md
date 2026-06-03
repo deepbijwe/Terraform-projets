@@ -16,29 +16,29 @@
                    Internet Gateway
                            │
           ┌────────────────┴──────────────────┐
-          │          VPC: 10.0.0.0/16          │
-          │                                    │
+          │          VPC: 10.0.0.0/16         │
+          │                                   │
           │  ┌─────────────────────────────┐  │
-          │  │    Public Subnet             │  │
-          │  │    10.0.1.0/24               │  │
-          │  │                              │  │
-          │  │  Public Route Table ─► IGW   │  │
-          │  │  NAT Gateway + Elastic IP    │  │
-          │  │  Security Group (ec2-sg)     │  │
-          │  │  EC2 × 3  (t3.micro)         │  │
+          │  │    Public Subnet            │  │
+          │  │    10.0.1.0/24              │  │
+          │  │                             │  │
+          │  │  Public Route Table ─► IGW  │  │
+          │  │  NAT Gateway + Elastic IP   │  │
+          │  │  Security Group (ec2-sg)    │  │
+          │  │  EC2 × 3  (t3.micro)        │  │
           │  └─────────────────────────────┘  │
-          │                │                   │
-          │          (outbound only)            │
-          │                │                   │
+          │                │                  │
+          │          (outbound only)          │
+          │                │                  │
           │  ┌─────────────▼───────────────┐  │
-          │  │    Private Subnet            │  │
-          │  │    10.0.2.0/24               │  │
-          │  │                              │  │
-          │  │  Private Route Table ─► NAT  │  │
-          │  │  EC2 × 2  (t3.micro)         │  │
-          │  │  No public IP                │  │
+          │  │    Private Subnet           │  │
+          │  │    10.0.2.0/24              │  │
+          │  │                             │  │
+          │  │  Private Route Table ─► NAT │  │
+          │  │  EC2 × 2  (t3.micro)        │  │
+          │  │  No public IP               │  │
           │  └─────────────────────────────┘  │
-          └────────────────────────────────────┘
+          └───────────────────────────────────┘
 ```
 
 ---
