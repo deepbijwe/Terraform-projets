@@ -84,7 +84,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port       = 80
     to_port         = 80
     protocol        = "tcp"
-    security_groups = [aws_security_group.alb_sg.id]  # only ALB can reach EC2
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
@@ -114,8 +114,8 @@ resource "aws_instance" "web1" {
 
   user_data = <<-EOF
     #!/bin/bash
-    yum update -y
-    yum install -y httpd
+    apt update -y
+    apt install -y httpd
     systemctl start httpd
     systemctl enable httpd
     echo "<h1>Hello from Instance 1</h1>" > /var/www/html/index.html
@@ -133,8 +133,8 @@ resource "aws_instance" "web2" {
 
   user_data = <<-EOF
     #!/bin/bash
-    yum update -y
-    yum install -y httpd
+    apt update -y
+    apt install -y httpd
     systemctl start httpd
     systemctl enable httpd
     echo "<h1>Hello from Instance 2</h1>" > /var/www/html/index.html
