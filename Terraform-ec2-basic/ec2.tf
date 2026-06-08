@@ -20,6 +20,7 @@ resource "aws_instance" "my-ec2-instance1"  {
 }
 
 
+
 output "instance_id" {
     value = aws_instance.my-ec2-instance.id
 }
@@ -55,5 +56,3 @@ output "instance_ids" {
 variable "instance_count" {
   default = 2
 }
-
-var
