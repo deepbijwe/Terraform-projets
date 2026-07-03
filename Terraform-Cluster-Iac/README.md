@@ -105,5 +105,5 @@ Uncomment the `backend "s3"` block in `provider.tf` and set your bucket name —
 | `project_name` | `eks-dev` | Prefix for all resources |
 | `region` | `ap-south-1` | AWS region |
 | `cluster_version` | `1.30` | Kubernetes version |
-| `node_instance_type` | `t3.medium` | Worker node size |
+| `node_instance_type` | `c7i-flex.large` | Worker node size |
 | `node_desired_size` | `1` | Number of nodes |
